@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:padding="15dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:fontFamily="@font/cdbold"
+        android:text="@string/sigup"
+        android:textSize="18dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>,
+
+    <EditText
+        android:id="@+id/et_emailLogin"
+        android:hint="@string/enterEmail"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:padding="15dp"
+        android:layout_margin="5dp"
+        android:drawablePadding="10dp"
+        android:background="@drawable/edit_text_states"
+        android:textColorHighlight="@color/colorPrimary"
+        android:fontFamily="@font/cdregular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_nickname"
+        android:hint="@string/nickname"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:padding="15dp"
+        android:layout_margin="5dp"
+        android:drawablePadding="10dp"
+        android:background="@drawable/edit_text_states"
+        android:textColorHighlight="@color/colorPrimary"
+        android:fontFamily="@font/cdregular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_emailRegister"
+        android:drawableRight="@drawable/ic_visibility_off_black_24dp"
+        android:padding="15dp"
+        android:layout_margin="5dp"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:background="@drawable/edit_text_states"
+        android:fontFamily="@font/cdregular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_signIn"
+            android:text="@string/sigup"
+            android:fontFamily="@font/cdbold"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</LinearLayout>

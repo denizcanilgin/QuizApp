@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="login">Giriş yap</string>
+    <string name="enterEmail">Email</string>
+    <string name="password">Şifre</string>
+    <string name="register">Şimdi kayıt ol!</string>
+    <string name="back">Geri Dön</string>
+    <string name="sigup">Kayıt ol</string>
+    <string name="nickname">İsim / takma isim</string>
+    <string name="forgotpass">Şifremi unuttum</string>
+    <string name="sendresetmail">Sıfırlama adresi gönder</string>
+    <string name="liveQuiz">Bilgi Yarışması - CANLI</string>
+    <string name="leaderboard">Liderlik Tablosu</string>
+</resources>
