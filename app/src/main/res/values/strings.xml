@@ -11,4 +11,6 @@
     <string name="sendresetmail">Sıfırlama adresi gönder</string>
     <string name="liveQuiz">Bilgi Yarışması - CANLI</string>
     <string name="leaderboard">Liderlik Tablosu</string>
+    <string name="pleaseentervalidemail">Lütfen geçerli bir email adresi giriniz!</string>
+    <string name="activeQuizes">Açık Bilgi Yarışmaları</string>
 </resources>

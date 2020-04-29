@@ -23,6 +23,8 @@
         <activity android:name=".Activities.AuthActivity"/>
         <activity android:name=".Activities.QuizActivity"/>
         <activity android:name=".Activities.LeaderBoardActivity"/>
+        <activity android:name=".Activities.QuizesActivity"/>
+        <activity android:name=".Activities.ResultActivity"/>
 
     </application>
 

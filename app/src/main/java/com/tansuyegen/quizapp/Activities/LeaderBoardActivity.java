@@ -27,7 +27,7 @@ public class LeaderBoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
         onCreateMethods();
-        fillUsersLeaderBoard();
+//        fillUsersLeaderBoard();
         leaderBoardAdapter.notifyDataSetChanged();
 
     }
@@ -50,11 +50,11 @@ public class LeaderBoardActivity extends AppCompatActivity {
 
     private void fillUsersLeaderBoard(){
 
-        usersLeaderBoard.add(new LeaderBoardUser(4,150,"denizcanilgin","url"));
-        usersLeaderBoard.add(new LeaderBoardUser(5,125,"ulukanulutas","url"));
-        usersLeaderBoard.add(new LeaderBoardUser(6,100,"eminenuralozturk","url"));
-        usersLeaderBoard.add(new LeaderBoardUser(7,75,"cemtuncelli","url"));
-        usersLeaderBoard.add(new LeaderBoardUser(8,50,"mertkaderoglu","url"));
+//        usersLeaderBoard.add(new LeaderBoardUser(4,150,"denizcanilgin","url"));
+//        usersLeaderBoard.add(new LeaderBoardUser(5,125,"ulukanulutas","url"));
+//        usersLeaderBoard.add(new LeaderBoardUser(6,100,"eminenuralozturk","url"));
+//        usersLeaderBoard.add(new LeaderBoardUser(7,75,"cemtuncelli","url"));
+//        usersLeaderBoard.add(new LeaderBoardUser(8,50,"mertkaderoglu","url"));
 
     }
 

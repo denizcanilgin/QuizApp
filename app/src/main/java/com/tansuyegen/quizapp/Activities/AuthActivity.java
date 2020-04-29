@@ -1,6 +1,7 @@
 package com.tansuyegen.quizapp.Activities;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,6 +20,8 @@ import androidx.fragment.app.FragmentContainer;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.tansuyegen.quizapp.Fragments.AuthFragments.LoginFragment;
 import com.tansuyegen.quizapp.Fragments.AuthFragments.RegisterFragment;
 import com.tansuyegen.quizapp.R;
@@ -30,6 +33,8 @@ public class AuthActivity extends AppCompatActivity {
     //0 == login ; 1 == register ; 2 == reset_pass
     int current_fragment = 1;
 
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +45,8 @@ public class AuthActivity extends AppCompatActivity {
     }
 
     private void onCreateMethod(){
+
+        // Initialize Firebase Auth
 
 
         nav_tv = findViewById(R.id.tv_nav);

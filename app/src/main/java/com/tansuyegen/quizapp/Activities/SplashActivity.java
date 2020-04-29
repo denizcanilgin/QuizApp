@@ -15,6 +15,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.tansuyegen.quizapp.R;
 
 public class SplashActivity extends AppCompatActivity {
@@ -43,9 +45,15 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //Do something after 100ms
-                Intent i = new Intent(SplashActivity.this, AuthActivity.class);
-                startActivity(i);
+                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
+                if(currentUser != null)
+                {Intent i = new Intent(SplashActivity.this,QuizesActivity.class);
+                    startActivity(i);
+                }else {
+                    Intent i = new Intent(SplashActivity.this, AuthActivity.class);
+                    startActivity(i);
+                }
             }
         }, 2000);
 
