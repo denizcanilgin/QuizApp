@@ -11,10 +11,13 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.tansuyegen.quizapp.R;
@@ -45,7 +48,10 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //Do something after 100ms
+
                 FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+                FirebaseAuth.getInstance()
+                        .signOut();
 
                 if(currentUser != null)
                 {Intent i = new Intent(SplashActivity.this,QuizesActivity.class);
