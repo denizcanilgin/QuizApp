@@ -1,10 +1,14 @@
 package com.tansuyegen.quizapp.Activities;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseIntArray;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
@@ -15,6 +19,7 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -38,14 +43,31 @@ public class QuizesActivity extends AppCompatActivity {
     ArrayList<Quiz> quizes;
     QuizesAdapter quizesAdapter;
 
+    ImageView iv_menuIcon;
+
     LinearLayout ly_laoding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_active_quizes);
+        onCreateMethods();
+
+
+        fetchAllQuizes();
+
+    }
+
+    private void onCreateMethods(){
 
         ly_laoding = findViewById(R.id.ly_laoding);
+        iv_menuIcon = findViewById(R.id.iv_menuIcon);
+        iv_menuIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               showMenuDialog();
+            }
+        });
 
         quizes = new ArrayList<Quiz>();
         lv_activeQuizes = findViewById(R.id.lv_activeQuizes);
@@ -67,8 +89,27 @@ public class QuizesActivity extends AppCompatActivity {
             }
         });
 
-        fetchAllQuizes();
+        //To Change The Status Bar Color and Bottom NavBar Color
+        Window window = this.getWindow();
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
+        window.setNavigationBarColor(Color.parseColor("#5c4db1"));
 
+
+    }
+
+    private void showMenuDialog(){
+
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.dialog_menu);
+        dialog.setCancelable(true);
+        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT);
+
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+
+
+        dialog.show();
     }
 
     private void fetchAllQuizes(){

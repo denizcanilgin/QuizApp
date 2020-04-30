@@ -50,8 +50,8 @@ public class SplashActivity extends AppCompatActivity {
                 //Do something after 100ms
 
                 FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-                FirebaseAuth.getInstance()
-                        .signOut();
+//                FirebaseAuth.getInstance()
+//                        .signOut();
 
                 if(currentUser != null)
                 {Intent i = new Intent(SplashActivity.this,QuizesActivity.class);
