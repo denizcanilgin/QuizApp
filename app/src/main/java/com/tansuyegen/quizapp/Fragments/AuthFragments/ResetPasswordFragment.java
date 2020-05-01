@@ -27,8 +27,9 @@ public class ResetPasswordFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater,ViewGroup viewGroup, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_reset_pass, viewGroup, false);
             auth=FirebaseAuth.getInstance();
-            final EditText sifre=(EditText)view.findViewById(R.id.sifreunut);
-        Button button = (Button)view.findViewById(R.id.sifre);
+
+            final EditText sifre=(EditText)view.findViewById(R.id.et_emailForPass);
+        Button button = (Button)view.findViewById(R.id.bt_sendResetLink);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -36,7 +36,7 @@ public class LoginFragment extends Fragment {
 
     TextView tv_forgotPass;
     EditText et_email,et_pass;
-    LinearLayout ly_resetPass, ly_main;
+    LinearLayout ly_resetPass, ly_main,resss;
     Button bt_login;
     View view;
     private FirebaseAuth mAuth;
@@ -47,7 +47,7 @@ public class LoginFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_login,null);
 
         mAuth = FirebaseAuth.getInstance();
-
+resss=view.findViewById(R.id.respasss);
         et_email = view.findViewById(R.id.et_emailLogin);
         et_pass = view.findViewById(R.id.et_passLogin);
 
