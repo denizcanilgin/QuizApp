@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,6 +28,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.tansuyegen.quizapp.Adapters.QuizesAdapter;
+import com.tansuyegen.quizapp.MenuAct.Profil;
 import com.tansuyegen.quizapp.Models.Quiz;
 import com.tansuyegen.quizapp.R;
 
@@ -39,6 +41,8 @@ public class QuizesActivity extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+
+    TextView home;
     ListView lv_activeQuizes;
     ArrayList<Quiz> quizes;
     QuizesAdapter quizesAdapter;
@@ -51,8 +55,8 @@ public class QuizesActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_active_quizes);
+        home=findViewById(R.id.anas);
         onCreateMethods();
-
 
         fetchAllQuizes();
 
@@ -101,16 +105,15 @@ public class QuizesActivity extends AppCompatActivity {
 
     private void showMenuDialog(){
 
-        Dialog dialog = new Dialog(this);
+        final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_menu);
         dialog.setCancelable(true);
         dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT);
-
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-
-
         dialog.show();
     }
+
+
 
     private void fetchAllQuizes(){
 
@@ -190,4 +193,19 @@ public class QuizesActivity extends AppCompatActivity {
 
     }
 
+    public void profil(View view) {
+        Intent intent=new Intent(QuizesActivity.this,Profil.class);
+        startActivity(intent);
+    }
+
+    public void Cikis1(View view) {
+        Intent intent=new Intent(QuizesActivity.this,AuthActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+
+    public void Anasayfa(View view) {
+        finish();
+    }
 }

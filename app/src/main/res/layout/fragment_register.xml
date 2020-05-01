@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/edit_text_states"
-            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawableLeft="@drawable/ic_person2"
             android:drawablePadding="10dp"
             android:fontFamily="@font/cdregular"
             android:hint="@string/nickname"

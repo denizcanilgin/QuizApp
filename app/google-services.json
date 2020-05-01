@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "986389695233-8c0q6hpquadflc425rvsadf6udsj4pd4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tansuyegen.quizapp",
+            "certificate_hash": "231fcf616426ce33304f0605d5ab7b45c24f6a44"
+          }
+        },
+        {
           "client_id": "986389695233-gul4rti3nmi17ah76ch9m1ukv7k44nq9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
