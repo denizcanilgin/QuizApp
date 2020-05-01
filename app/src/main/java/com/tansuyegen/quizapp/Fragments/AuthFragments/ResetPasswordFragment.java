@@ -21,18 +21,22 @@ import com.tansuyegen.quizapp.Activities.AuthActivity;
 import com.tansuyegen.quizapp.R;
 
 public class ResetPasswordFragment extends Fragment {
-    FirebaseAuth auth;
+    public ResetPasswordFragment() {
 
+    }
+    FirebaseAuth auth;
+    View view;
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater,ViewGroup viewGroup, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_reset_pass, viewGroup, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_reset_pass,null);
             auth=FirebaseAuth.getInstance();
 
-            final EditText sifre=(EditText)view.findViewById(R.id.et_emailForPass);
-        Button button = (Button)view.findViewById(R.id.bt_sendResetLink);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+           final EditText sifre=(EditText)view.findViewById(R.id.et_emailForPass);
+         Button button=(Button)view.findViewById(R.id.bt_sendResetLink);
+         button.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
               String uEmail=sifre.getText().toString();
               if (TextUtils.isEmpty(uEmail))
               {
@@ -53,9 +57,8 @@ public class ResetPasswordFragment extends Fragment {
                       }
                   });
               }
-            }
-        });
-
+          }
+      });
 
         return view;
     }
