@@ -13,4 +13,5 @@
     <string name="leaderboard">Liderlik Tablosu</string>
     <string name="pleaseentervalidemail">Lütfen geçerli bir email adresi giriniz!</string>
     <string name="activeQuizes">Açık Bilgi Yarışmaları</string>
+    <string name="twitter_le_giri_yap">Twitter İle Giriş Yap</string>
 </resources>

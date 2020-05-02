@@ -24,6 +24,7 @@ import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -40,7 +41,7 @@ import java.util.Locale;
 public class QuizesActivity extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-
+    FirebaseAuth auth;
 
     TextView home;
     ListView lv_activeQuizes;
@@ -63,6 +64,7 @@ public class QuizesActivity extends AppCompatActivity {
     }
 
     private void onCreateMethods(){
+        FirebaseAuth.getInstance().signOut();
 
         ly_laoding = findViewById(R.id.ly_laoding);
         iv_menuIcon = findViewById(R.id.iv_menuIcon);
@@ -199,13 +201,15 @@ public class QuizesActivity extends AppCompatActivity {
     }
 
     public void Cikis1(View view) {
-        Intent intent=new Intent(QuizesActivity.this,AuthActivity.class);
-        startActivity(intent);
-        finish();
+       FirebaseAuth.getInstance().signOut();
+       finish();
+       startActivity(new Intent(this,AuthActivity.class));
     }
 
 
     public void Anasayfa(View view) {
+        Intent intent=new Intent(QuizesActivity.this,QuizesActivity.class);
+        startActivity(intent);
         finish();
     }
 }

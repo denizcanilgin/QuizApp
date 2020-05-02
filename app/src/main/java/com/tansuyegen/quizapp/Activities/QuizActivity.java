@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -25,6 +27,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentId;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -33,6 +36,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
 import com.google.firebase.functions.FirebaseFunctions;
 import com.google.firebase.functions.HttpsCallableResult;
+import com.squareup.picasso.Picasso;
 import com.tansuyegen.quizapp.Adapters.AnswersAdapter;
 import com.tansuyegen.quizapp.Adapters.LeaderBoardAdapter;
 import com.tansuyegen.quizapp.Models.Answer;
@@ -51,10 +55,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class QuizActivity extends AppCompatActivity {
+    private static final String TAG ="QuizActivity";
 
     // Access a Cloud Firestore instance from your Activity
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-
+    ImageView sorular;
     TextView tv_timer,tv_questionTitle;
     ListView lv_answers;
     int sec = 90; //Time of quiz
@@ -66,7 +71,7 @@ public class QuizActivity extends AppCompatActivity {
     int correct_answer_of_current_question = 0;
 
     int numberOfCorrectlyAnsweredQuestion = 0;
-
+    String resimler1;
     String currentQuizId;
 
     @Override
@@ -76,8 +81,14 @@ public class QuizActivity extends AppCompatActivity {
         onCreateMethods();
 //        fetchAllQuizes();
 
+        sorular=findViewById(R.id.sorular);
+      String resim_id=getIntent().getExtras().getString("resimler");
+        fetchImage(resim_id);
+
+
         String quiz_id = getIntent().getExtras().getString("clicked_quiz_id");
         fetchQuiz(quiz_id);
+        this.resimler1=resim_id;
         this.currentQuizId = quiz_id;
 
 
@@ -118,6 +129,25 @@ public class QuizActivity extends AppCompatActivity {
         else
             tv_timer.setBackgroundResource(R.drawable.redtimer);
 
+
+    }
+    private void fetchImage(final String id){
+        DocumentReference user = db.collection("Questions").document(id);
+        //Reis bu kısımda nasıl sıkıntı var anlamadım
+        //Android studio bozuk aq
+        user.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot doc = task.getResult();
+                    String img_url = (String) doc.getString("ImageURL");
+                    Glide.with(getApplicationContext())
+                            .load(img_url)
+                            .into(sorular);
+
+                }
+            }
+        });
 
     }
 
