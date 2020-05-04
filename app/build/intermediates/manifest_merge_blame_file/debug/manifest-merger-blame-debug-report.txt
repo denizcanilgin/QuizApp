@@ -1,0 +1,290 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tansuyegen.quizapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+11-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:4:5-96
+11-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:4:22-77
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:5:5-97
+12-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:5:22-78
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:6:5-67
+13-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:6:22-64
+14
+15    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+16    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->[com.google.firebase:firebase-storage:19.1.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/8ad4e1ffea3e5c78db0912db37bdac9c/jetified-firebase-storage-19.1.1/AndroidManifest.xml:26:5-79
+17-->[com.google.firebase:firebase-storage:19.1.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/8ad4e1ffea3e5c78db0912db37bdac9c/jetified-firebase-storage-19.1.1/AndroidManifest.xml:26:22-76
+18    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+18-->[com.google.android.gms:play-services-measurement-api:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/883fe3ee61da0b22067da7d7ee17f093/jetified-play-services-measurement-api-17.2.2/AndroidManifest.xml:24:5-68
+18-->[com.google.android.gms:play-services-measurement-api:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/883fe3ee61da0b22067da7d7ee17f093/jetified-play-services-measurement-api-17.2.2/AndroidManifest.xml:24:22-65
+19    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+19-->[com.google.firebase:firebase-iid:20.0.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/0dbca7ef2e7fe6dd6ad20b90edf9f9bc/jetified-firebase-iid-20.0.2/AndroidManifest.xml:26:5-82
+19-->[com.google.firebase:firebase-iid:20.0.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/0dbca7ef2e7fe6dd6ad20b90edf9f9bc/jetified-firebase-iid-20.0.2/AndroidManifest.xml:26:22-79
+20    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+20-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:26:5-110
+20-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:26:22-107
+21
+22    <application
+22-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:8:5-30:19
+23        android:name="com.tansuyegen.quizapp.App"
+23-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:10:9-28
+24        android:allowBackup="true"
+24-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:9:9-35
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/f961a727fd6ff1bec6d760c391cc6822/core-1.1.0/AndroidManifest.xml:24:18-86
+26        android:debuggable="true"
+27        android:extractNativeLibs="false"
+28        android:icon="@mipmap/ic_launcher"
+28-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:11:9-43
+29        android:label="@string/app_name"
+29-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:12:9-41
+30        android:roundIcon="@mipmap/ic_launcher_round"
+30-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:13:9-54
+31        android:supportsRtl="true"
+31-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:14:9-35
+32        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+32-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:15:9-65
+33        <activity android:name="com.tansuyegen.quizapp.Activities.ProfilActivity" />
+33-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:16:9-72
+33-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:16:19-60
+34        <activity android:name="com.tansuyegen.quizapp.Activities.SplashActivity" >
+34-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:17:9-23:20
+34-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:17:19-60
+35            <intent-filter>
+35-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:18:13-22:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:19:17-69
+36-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:19:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:21:17-77
+38-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:21:27-74
+39            </intent-filter>
+40        </activity>
+41        <activity android:name="com.tansuyegen.quizapp.Activities.MainActivity" />
+41-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:24:9-61
+41-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:24:19-58
+42        <activity android:name="com.tansuyegen.quizapp.Activities.AuthActivity" />
+42-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:25:9-61
+42-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:25:19-58
+43        <activity android:name="com.tansuyegen.quizapp.Activities.QuizActivity" />
+43-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:26:9-61
+43-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:26:19-58
+44        <activity android:name="com.tansuyegen.quizapp.Activities.LeaderBoardActivity" />
+44-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:27:9-68
+44-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:27:19-65
+45        <activity android:name="com.tansuyegen.quizapp.Activities.QuizesActivity" />
+45-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:28:9-63
+45-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:28:19-60
+46        <activity android:name="com.tansuyegen.quizapp.Activities.ResultActivity" />
+46-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:29:9-63
+46-->/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:29:19-60
+47        <activity
+47-->[com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:28:9-31:49
+48            android:name="com.twitter.sdk.android.tweetui.PlayerActivity"
+48-->[com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:29:13-74
+49            android:configChanges="keyboardHidden|orientation|screenSize"
+49-->[com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:30:13-74
+50            android:theme="@style/MediaTheme" />
+50-->[com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:31:13-46
+51        <activity
+51-->[com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:32:9-34:49
+52            android:name="com.twitter.sdk.android.tweetui.GalleryActivity"
+52-->[com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:33:13-75
+53            android:theme="@style/MediaTheme" />
+53-->[com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:34:13-46
+54        <activity
+54-->[com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:28:9-31:71
+55            android:name="com.twitter.sdk.android.tweetcomposer.ComposerActivity"
+55-->[com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:29:13-82
+56            android:exported="false"
+56-->[com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:30:13-37
+57            android:windowSoftInputMode="adjustResize|stateVisible" />
+57-->[com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:31:13-68
+58
+59        <service
+59-->[com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:33:9-36:40
+60            android:name="com.twitter.sdk.android.tweetcomposer.TweetUploadService"
+60-->[com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:34:13-84
+61            android:enabled="true"
+61-->[com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:35:13-35
+62            android:exported="false" />
+62-->[com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:36:13-37
+63
+64        <activity
+64-->[com.twitter.sdk.android:twitter-core:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1f062955762b01de9ddf4a823b216457/jetified-twitter-core-3.1.0/AndroidManifest.xml:28:9-32:40
+65            android:name="com.twitter.sdk.android.core.identity.OAuthActivity"
+65-->[com.twitter.sdk.android:twitter-core:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1f062955762b01de9ddf4a823b216457/jetified-twitter-core-3.1.0/AndroidManifest.xml:29:13-79
+66            android:configChanges="orientation|screenSize"
+66-->[com.twitter.sdk.android:twitter-core:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1f062955762b01de9ddf4a823b216457/jetified-twitter-core-3.1.0/AndroidManifest.xml:30:13-59
+67            android:excludeFromRecents="true"
+67-->[com.twitter.sdk.android:twitter-core:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1f062955762b01de9ddf4a823b216457/jetified-twitter-core-3.1.0/AndroidManifest.xml:31:13-46
+68            android:exported="false" />
+68-->[com.twitter.sdk.android:twitter-core:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1f062955762b01de9ddf4a823b216457/jetified-twitter-core-3.1.0/AndroidManifest.xml:32:13-37
+69
+70        <service
+70-->[com.google.firebase:firebase-storage:19.1.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/8ad4e1ffea3e5c78db0912db37bdac9c/jetified-firebase-storage-19.1.1/AndroidManifest.xml:30:9-36:19
+71            android:name="com.google.firebase.components.ComponentDiscoveryService"
+71-->[com.google.firebase:firebase-storage:19.1.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/8ad4e1ffea3e5c78db0912db37bdac9c/jetified-firebase-storage-19.1.1/AndroidManifest.xml:31:13-84
+72            android:directBootAware="true"
+72-->[com.google.firebase:firebase-common:19.3.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1b23a58bb1c539c2a19df1b0920c32b5/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+73            android:exported="false" >
+73-->[com.google.firebase:firebase-storage:19.1.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/8ad4e1ffea3e5c78db0912db37bdac9c/jetified-firebase-storage-19.1.1/AndroidManifest.xml:32:13-37
+74            <meta-data
+74-->[com.google.firebase:firebase-storage:19.1.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/8ad4e1ffea3e5c78db0912db37bdac9c/jetified-firebase-storage-19.1.1/AndroidManifest.xml:33:13-35:85
+75                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+75-->[com.google.firebase:firebase-storage:19.1.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/8ad4e1ffea3e5c78db0912db37bdac9c/jetified-firebase-storage-19.1.1/AndroidManifest.xml:34:17-107
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[com.google.firebase:firebase-storage:19.1.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/8ad4e1ffea3e5c78db0912db37bdac9c/jetified-firebase-storage-19.1.1/AndroidManifest.xml:35:17-82
+77            <meta-data
+77-->[com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:36:13-38:85
+78                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+78-->[com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:37:17-109
+79                android:value="com.google.firebase.components.ComponentRegistrar" />
+79-->[com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:38:17-82
+80            <meta-data
+80-->[com.google.firebase:firebase-firestore:21.4.3] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/6269180a454dcee3102e33d0802d2ac4/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:20:13-22:85
+81                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+81-->[com.google.firebase:firebase-firestore:21.4.3] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/6269180a454dcee3102e33d0802d2ac4/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:21:17-111
+82                android:value="com.google.firebase.components.ComponentRegistrar" />
+82-->[com.google.firebase:firebase-firestore:21.4.3] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/6269180a454dcee3102e33d0802d2ac4/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:22:17-82
+83            <meta-data
+83-->[com.google.android.gms:play-services-measurement-api:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/883fe3ee61da0b22067da7d7ee17f093/jetified-play-services-measurement-api-17.2.2/AndroidManifest.xml:30:13-32:85
+84                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+84-->[com.google.android.gms:play-services-measurement-api:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/883fe3ee61da0b22067da7d7ee17f093/jetified-play-services-measurement-api-17.2.2/AndroidManifest.xml:31:17-139
+85                android:value="com.google.firebase.components.ComponentRegistrar" />
+85-->[com.google.android.gms:play-services-measurement-api:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/883fe3ee61da0b22067da7d7ee17f093/jetified-play-services-measurement-api-17.2.2/AndroidManifest.xml:32:17-82
+86            <meta-data
+86-->[com.google.firebase:firebase-iid:20.0.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/0dbca7ef2e7fe6dd6ad20b90edf9f9bc/jetified-firebase-iid-20.0.2/AndroidManifest.xml:32:13-34:85
+87                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+87-->[com.google.firebase:firebase-iid:20.0.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/0dbca7ef2e7fe6dd6ad20b90edf9f9bc/jetified-firebase-iid-20.0.2/AndroidManifest.xml:33:17-96
+88                android:value="com.google.firebase.components.ComponentRegistrar" />
+88-->[com.google.firebase:firebase-iid:20.0.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/0dbca7ef2e7fe6dd6ad20b90edf9f9bc/jetified-firebase-iid-20.0.2/AndroidManifest.xml:34:17-82
+89        </service>
+90
+91        <activity
+91-->[com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:24:9-31:50
+92            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+92-->[com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:25:13-85
+93            android:excludeFromRecents="true"
+93-->[com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:26:13-46
+94            android:exported="true"
+94-->[com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:27:13-36
+95            android:launchMode="singleTask"
+95-->[com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:28:13-44
+96            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+96-->[com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:29:13-102
+97            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+97-->[com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:30:13-72
+98
+99        <provider
+99-->[com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+100            android:name="com.squareup.picasso.PicassoProvider"
+100-->[com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+101            android:authorities="com.tansuyegen.quizapp.com.squareup.picasso"
+101-->[com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+102            android:exported="false" />
+102-->[com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+103
+104        <receiver
+104-->[com.google.firebase:firebase-iid:20.0.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/0dbca7ef2e7fe6dd6ad20b90edf9f9bc/jetified-firebase-iid-20.0.2/AndroidManifest.xml:37:9-44:20
+105            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+105-->[com.google.firebase:firebase-iid:20.0.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/0dbca7ef2e7fe6dd6ad20b90edf9f9bc/jetified-firebase-iid-20.0.2/AndroidManifest.xml:38:13-78
+106            android:exported="true"
+106-->[com.google.firebase:firebase-iid:20.0.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/0dbca7ef2e7fe6dd6ad20b90edf9f9bc/jetified-firebase-iid-20.0.2/AndroidManifest.xml:39:13-36
+107            android:permission="com.google.android.c2dm.permission.SEND" >
+107-->[com.google.firebase:firebase-iid:20.0.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/0dbca7ef2e7fe6dd6ad20b90edf9f9bc/jetified-firebase-iid-20.0.2/AndroidManifest.xml:40:13-73
+108            <intent-filter>
+108-->[com.google.firebase:firebase-iid:20.0.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/0dbca7ef2e7fe6dd6ad20b90edf9f9bc/jetified-firebase-iid-20.0.2/AndroidManifest.xml:41:13-43:29
+109                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+109-->[com.google.firebase:firebase-iid:20.0.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/0dbca7ef2e7fe6dd6ad20b90edf9f9bc/jetified-firebase-iid-20.0.2/AndroidManifest.xml:42:17-81
+109-->[com.google.firebase:firebase-iid:20.0.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/0dbca7ef2e7fe6dd6ad20b90edf9f9bc/jetified-firebase-iid-20.0.2/AndroidManifest.xml:42:25-78
+110            </intent-filter>
+111        </receiver>
+112
+113        <activity
+113-->[com.google.android.gms:play-services-base:17.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/d515fa0142795af05e3369fe0848cba8/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+114            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+114-->[com.google.android.gms:play-services-base:17.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/d515fa0142795af05e3369fe0848cba8/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+115            android:exported="false"
+115-->[com.google.android.gms:play-services-base:17.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/d515fa0142795af05e3369fe0848cba8/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+116            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+116-->[com.google.android.gms:play-services-base:17.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/d515fa0142795af05e3369fe0848cba8/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+117
+118        <provider
+118-->[com.google.firebase:firebase-common:19.3.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1b23a58bb1c539c2a19df1b0920c32b5/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+119            android:name="com.google.firebase.provider.FirebaseInitProvider"
+119-->[com.google.firebase:firebase-common:19.3.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1b23a58bb1c539c2a19df1b0920c32b5/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+120            android:authorities="com.tansuyegen.quizapp.firebaseinitprovider"
+120-->[com.google.firebase:firebase-common:19.3.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1b23a58bb1c539c2a19df1b0920c32b5/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+121            android:exported="false"
+121-->[com.google.firebase:firebase-common:19.3.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1b23a58bb1c539c2a19df1b0920c32b5/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+122            android:initOrder="100" />
+122-->[com.google.firebase:firebase-common:19.3.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1b23a58bb1c539c2a19df1b0920c32b5/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+123
+124        <receiver
+124-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:29:9-33:20
+125            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+125-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:30:13-85
+126            android:enabled="true"
+126-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:31:13-35
+127            android:exported="false" >
+127-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:32:13-37
+128        </receiver>
+129        <receiver
+129-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:34:9-42:20
+130            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+130-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:35:13-100
+131            android:enabled="true"
+131-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:36:13-35
+132            android:exported="true"
+132-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:37:13-36
+133            android:permission="android.permission.INSTALL_PACKAGES" >
+133-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:38:13-69
+134            <intent-filter>
+134-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:39:13-41:29
+135                <action android:name="com.android.vending.INSTALL_REFERRER" />
+135-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:40:17-79
+135-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:40:25-76
+136            </intent-filter>
+137        </receiver>
+138
+139        <service
+139-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:44:9-47:40
+140            android:name="com.google.android.gms.measurement.AppMeasurementService"
+140-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:45:13-84
+141            android:enabled="true"
+141-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:46:13-35
+142            android:exported="false" />
+142-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:47:13-37
+143        <service
+143-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:48:9-52:72
+144            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+144-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:49:13-87
+145            android:enabled="true"
+145-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:50:13-35
+146            android:exported="false"
+146-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:51:13-37
+147            android:permission="android.permission.BIND_JOB_SERVICE" />
+147-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/10ddb5a7f44298deca40fafe6f4c087b/jetified-play-services-measurement-17.2.2/AndroidManifest.xml:52:13-69
+148
+149        <meta-data
+149-->[com.google.android.gms:play-services-basement:17.0.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/f720b24cc490c109d50c0a0a1e6bf186/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+150            android:name="com.google.android.gms.version"
+150-->[com.google.android.gms:play-services-basement:17.0.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/f720b24cc490c109d50c0a0a1e6bf186/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+151            android:value="@integer/google_play_services_version" />
+151-->[com.google.android.gms:play-services-basement:17.0.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/f720b24cc490c109d50c0a0a1e6bf186/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+152    </application>
+153
+154</manifest>
