@@ -55,7 +55,7 @@ public class RegisterFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-         view = inflater.inflate(R.layout.fragment_register,null);
+        view = inflater.inflate(R.layout.fragment_register,null);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -198,15 +198,15 @@ public class RegisterFragment extends Fragment {
         DocumentReference userRef= db.collection("Users").document(uId);
 
         userRef.set(user_map)
-               .addOnSuccessListener(new OnSuccessListener<Void>() {
-                   @Override
-                   public void onSuccess(Void aVoid) {
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
 
-                       Intent i = new Intent(getActivity(), QuizesActivity.class);
-                       startActivity(i);
+                        Intent i = new Intent(getActivity(), QuizesActivity.class);
+                        startActivity(i);
 
-                   }
-               });
+                    }
+                });
     }
 
     private void finishLoading(View view){

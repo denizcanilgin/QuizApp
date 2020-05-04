@@ -61,7 +61,7 @@ public class ResultActivity extends AppCompatActivity {
 
 //Sorun değil bi'tanem
     //Seni çok sevdim, söyleyemedim...
-        //Sen bunu bilmedin....
+    //Sen bunu bilmedin....
 
     private void fetchLeaderBoardAndSaveCurrent(String leaderBoardId, final int score){
 
@@ -192,9 +192,9 @@ public class ResultActivity extends AppCompatActivity {
         while(!sorted) {
             sorted = true;
 
-        for(int i = 0 ; i < usersLeaderBoard.size() - 1 ; i++){
-            int pointP = usersLeaderBoard.get(i).getUser_point();
-            int pointN = usersLeaderBoard.get(i + 1).getUser_point();
+            for(int i = 0 ; i < usersLeaderBoard.size() - 1 ; i++){
+                int pointP = usersLeaderBoard.get(i).getUser_point();
+                int pointN = usersLeaderBoard.get(i + 1).getUser_point();
                 if (pointN < pointP) {
                     LeaderBoardUser leaderBoardUser_temp = usersLeaderBoard.get(i); //7
                     usersLeaderBoard.set(i, usersLeaderBoard.get(i + 1)); //5
@@ -226,7 +226,7 @@ public class ResultActivity extends AppCompatActivity {
         }
 
 
-       if(usersLeaderBoard.size() > 2) fillTopThree( usersLeaderBoard.get(0),usersLeaderBoard.get(1),usersLeaderBoard.get(2));
+        if(usersLeaderBoard.size() > 2) fillTopThree( usersLeaderBoard.get(0),usersLeaderBoard.get(1),usersLeaderBoard.get(2));
 
     }
 

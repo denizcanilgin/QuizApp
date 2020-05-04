@@ -78,6 +78,22 @@
                 android:text="Kaydet"
                 android:textColor="@color/colorWhite" />
         </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="15dp">
+
+            <Button
+                android:id="@+id/kayit2"
+                android:onClick="kayit2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_state"
+                android:fontFamily="@font/cdbold"
+                android:text="Profil fotoğrafını Yükle"
+                android:textColor="@color/colorWhite" />
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 

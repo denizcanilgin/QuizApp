@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <string name="app_name">QuizApp</string>
     <string name="login">Giriş yap</string>
     <string name="enterEmail">Email</string>
@@ -14,4 +14,7 @@
     <string name="pleaseentervalidemail">Lütfen geçerli bir email adresi giriniz!</string>
     <string name="activeQuizes">Açık Bilgi Yarışmaları</string>
     <string name="twitter_le_giri_yap">Twitter İle Giriş Yap</string>
+    <string name="CONSUMER_KEY">y0JfGrWdFBPCoWOVgMSzL9KQp</string>
+    <string name="CONSUMER_SECRET">nJst3CoJ5pL2UvN8iCzzHIikFC7IZL9DWUGiuu4zOA7jHKtkVC</string>
 </resources>
+

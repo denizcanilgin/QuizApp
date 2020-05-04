@@ -77,14 +77,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <Button
+        <com.twitter.sdk.android.core.identity.TwitterLoginButton
             android:layout_marginTop="10dp"
             android:id="@+id/bt_twitter"
-            android:onClick="twitter"
-            android:text="@string/twitter_le_giri_yap"
-            android:fontFamily="@font/cdbold"
-            android:textColor="@color/colorWhite"
-            android:background="@drawable/button_state"
+            android:onClick="twitterg"
+            android:background="#00acee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
