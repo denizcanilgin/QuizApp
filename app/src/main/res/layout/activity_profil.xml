@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorPrimary"
     android:orientation="vertical"
-    tools:context=".MenuAct.Profil">
+    tools:context=".Activities.ProfilActivity">
 
 
 

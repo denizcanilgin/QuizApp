@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/edit_text_states"
-            android:drawableLeft="@drawable/ic_person2"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
             android:drawablePadding="10dp"
             android:fontFamily="@font/cdregular"
             android:hint="@string/nickname"
@@ -78,7 +78,27 @@
                 android:fontFamily="@font/cdbold"
                 android:text="@string/sigup"
                 android:textColor="@color/colorWhite" />
+
+
+
         </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:text="Twitter ile kayıt olun"
+            android:textColor="#00acee"
+            android:textAllCaps="false"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/bt_twitter_register"
+            android:drawableLeft="@drawable/twittericon"
+            android:drawablePadding="-55dp"
+            android:paddingStart="25dp"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

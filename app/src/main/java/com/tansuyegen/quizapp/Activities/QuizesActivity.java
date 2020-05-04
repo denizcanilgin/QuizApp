@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.SparseIntArray;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -24,11 +23,11 @@ import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.tansuyegen.quizapp.Adapters.QuizesAdapter;
-import com.tansuyegen.quizapp.MenuAct.Profil;
 import com.tansuyegen.quizapp.Models.Quiz;
 import com.tansuyegen.quizapp.R;
 
@@ -48,6 +47,7 @@ public class QuizesActivity extends AppCompatActivity {
     QuizesAdapter quizesAdapter;
 
     ImageView iv_menuIcon;
+    FirebaseAuth mAuth;
 
     LinearLayout ly_laoding;
 
@@ -72,6 +72,8 @@ public class QuizesActivity extends AppCompatActivity {
                 showMenuDialog();
             }
         });
+
+        mAuth = FirebaseAuth.getInstance();
 
         quizes = new ArrayList<Quiz>();
         lv_activeQuizes = findViewById(R.id.lv_activeQuizes);
@@ -194,11 +196,12 @@ public class QuizesActivity extends AppCompatActivity {
     }
 
     public void profil(View view) {
-        Intent intent=new Intent(QuizesActivity.this,Profil.class);
+        Intent intent=new Intent(QuizesActivity.this, ProfilActivity.class);
         startActivity(intent);
     }
 
     public void Cikis1(View view) {
+        mAuth.signOut();
         Intent intent=new Intent(QuizesActivity.this,AuthActivity.class);
         startActivity(intent);
         finish();

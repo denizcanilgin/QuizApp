@@ -30,6 +30,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.OAuthProvider;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.tansuyegen.quizapp.Activities.AuthActivity;
@@ -45,19 +46,27 @@ public class RegisterFragment extends Fragment {
 
 
     EditText et_emailRegister,et_nickname,et_password;
-    Button bt_signUp;
+    Button bt_signUp,bt_twitter;
     boolean pass_visibility = false;
     private FirebaseAuth mAuth;
     View view;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    OAuthProvider.Builder provider;
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_register,null);
-
         mAuth = FirebaseAuth.getInstance();
+
+        bt_twitter = view.findViewById(R.id.bt_twitter_register);
+        bt_twitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pendingAuthResult();
+            }
+        });
 
         et_emailRegister = view.findViewById(R.id.et_emailSignUp);
         bt_signUp = view.findViewById(R.id.bt_signUp);
@@ -102,6 +111,9 @@ public class RegisterFragment extends Fragment {
         });
 
 
+        provider = OAuthProvider.newBuilder("twitter.com");
+        provider.addCustomParameter("lang", "tr");
+
         bt_signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,6 +154,134 @@ public class RegisterFragment extends Fragment {
 
     }
 
+    private void pendingAuthResult(){
+
+        Task<AuthResult> pendingResultTask = mAuth.getPendingAuthResult();
+        if (pendingResultTask != null) {
+            // There's something already here! Finish the sign-in for your user.
+            pendingResultTask
+                    .addOnSuccessListener(
+                            new OnSuccessListener<AuthResult>() {
+                                @Override
+                                public void onSuccess(AuthResult authResult) {
+                                    // User is signed in.
+                                    // IdP data available in
+                                    // authResult.getAdditionalUserInfo().getProfile().
+                                    // The OAuth access token can also be retrieved:
+                                    // authResult.getCredential().getAccessToken().
+                                    // The OAuth secret can be retrieved by calling:
+                                    // authResult.getCredential().getSecret().
+                                    Log.i("Twitter_State","" + authResult );
+                                    String username = authResult.getAdditionalUserInfo().getUsername();
+                                    String user = authResult.getAdditionalUserInfo().getProfile().toString() + "";
+                                    Log.i("Twitter_State","" + user);
+
+                                    linkMultipleProviders();
+                                    Intent i = new Intent(getActivity(), QuizesActivity.class);
+                                    startActivity(i);
+
+
+                                }
+                            })
+                    .addOnFailureListener(
+                            new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    // Handle failure.
+                                    Log.i("Twitter_State","" + e.getMessage() );
+
+                                }
+                            });
+        } else {
+            // There's no pending result so you need to start the sign-in flow.
+            // See below.
+
+            Log.i("Twitter_State","NoPendingResult" );
+
+            startActivityForSignIn();
+
+
+        }
+
+    }
+
+    private void startActivityForSignIn(){
+
+        mAuth
+                .startActivityForSignInWithProvider(/* activity= */ getActivity(), provider.build())
+                .addOnSuccessListener(
+                        new OnSuccessListener<AuthResult>() {
+                            @Override
+                            public void onSuccess(AuthResult authResult) {
+                                // User is signed in.
+                                // IdP data available in
+                                // authResult.getAdditionalUserInfo().getProfile().
+                                // The OAuth access token can also be retrieved:
+                                // authResult.getCredential().getAccessToken().
+                                // The OAuth secret can be retrieved by calling:
+                                // authResult.getCredential().getSecret().
+
+                                Log.i("Twitter_State","" + authResult);
+                                String user = authResult.getAdditionalUserInfo().getProfile().toString() + "";
+                                Log.i("Twitter_State","" + user);
+
+                                String nickname = authResult.getAdditionalUserInfo().getUsername();
+                                String email = authResult.getUser().getEmail();
+                                String phone = authResult.getUser().getPhoneNumber();
+                                String photo_url = authResult.getUser().getPhotoUrl() + "";
+                                String uId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+                                uploadUserFieldsForTwitterAuth(uId,nickname,email,phone,photo_url);
+
+                                        linkMultipleProviders();
+                                Intent i = new Intent(getActivity(), QuizesActivity.class);
+                                startActivity(i);
+
+                            }
+                        })
+                .addOnFailureListener(
+                        new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                // Handle failure.
+                                Log.i("Twitter_State_Error","" + e.getMessage());
+
+                            }
+                        });
+
+
+    }
+
+    private void linkMultipleProviders(){
+
+        // The user is already signed-in.
+        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+
+        firebaseUser
+                .startActivityForLinkWithProvider(/* activity= */ getActivity(), provider.build())
+                .addOnSuccessListener(
+                        new OnSuccessListener<AuthResult>() {
+                            @Override
+                            public void onSuccess(AuthResult authResult) {
+                                // Twitter credential is linked to the current user.
+                                // IdP data available in
+                                // authResult.getAdditionalUserInfo().getProfile().
+                                // The OAuth access token can also be retrieved:
+                                // authResult.getCredential().getAccessToken().
+                                // The OAuth secret can be retrieved by calling:
+                                // authResult.getCredential().getSecret().
+                            }
+                        })
+                .addOnFailureListener(
+                        new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                // Handle failure.
+                            }
+                        });
+
+
+    }
 
     private void checkTheInputs(String str_email, String str_password, String str_nickname){
 
@@ -208,6 +348,31 @@ public class RegisterFragment extends Fragment {
                     }
                 });
     }
+
+    private void uploadUserFieldsForTwitterAuth(String uId,String nickname, String email, String phone, String image_url){
+
+
+        Map<String, String> user_map = new HashMap<>();
+        user_map.put("nickname",nickname);
+        user_map.put("email",email);
+        user_map.put("phone",phone);
+        user_map.put("pp_url",image_url);
+        user_map.put("source", "twitter");
+
+        DocumentReference userRef= db.collection("Users").document(uId);
+
+        userRef.set(user_map)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+
+                        Intent i = new Intent(getActivity(), QuizesActivity.class);
+                        startActivity(i);
+
+                    }
+                });
+    }
+
 
     private void finishLoading(View view){
 

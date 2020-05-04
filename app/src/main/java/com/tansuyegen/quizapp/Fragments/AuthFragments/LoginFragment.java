@@ -30,9 +30,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.OAuthProvider;
+import com.google.firebase.firestore.DocumentReference;
 import com.tansuyegen.quizapp.Activities.AuthActivity;
 import com.tansuyegen.quizapp.Activities.QuizActivity;
 import com.tansuyegen.quizapp.Activities.QuizesActivity;
+import com.tansuyegen.quizapp.Models.Quiz;
 import com.tansuyegen.quizapp.R;
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.DefaultLogger;
@@ -46,29 +48,26 @@ import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LoginFragment extends Fragment {
 
-    TwitterLoginButton loginButton;
-    FirebaseAuth firebaseAuth;
+    Button loginButton;
     TextView tv_forgotPass;
     EditText et_email,et_pass;
     LinearLayout ly_resetPass, ly_main,resss;
-    Button bt_login,twittergiris;
+    Button bt_login,bt_twitter;
     View view;
     private FirebaseAuth mAuth;
+    OAuthProvider.Builder provider;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_login,null);
         resetPass();
-       // Twitter.initialize(getActivity());
-        TwitterConfig config = new TwitterConfig.Builder(getActivity())
-                .logger(new DefaultLogger(Log.DEBUG))
-                .twitterAuthConfig(new TwitterAuthConfig("y0JfGrWdFBPCoWOVgMSzL9KQp", "nJst3CoJ5pL2UvN8iCzzHIikFC7IZL9DWUGiuu4zOA7jHKtkVC"))
-                .debug(true)
-                .build();
-        Twitter.initialize(config);
+
         mAuth = FirebaseAuth.getInstance();
         resss=view.findViewById(R.id.respasss);
         et_email = view.findViewById(R.id.et_emailLogin);
@@ -84,7 +83,14 @@ public class LoginFragment extends Fragment {
         ly_resetPass = view.findViewById(R.id.ly_resetPass);
         ly_main = view.findViewById(R.id.ly_main);
         tv_forgotPass = view.findViewById(R.id.tv_forgotPass);
-        loginButton = (TwitterLoginButton)view.findViewById(R.id.bt_twitter);
+        bt_twitter = (Button) view.findViewById(R.id.bt_twitter_login);
+        bt_twitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pendingAuthResult();
+            }
+        });
+
         tv_forgotPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,32 +103,11 @@ public class LoginFragment extends Fragment {
             }
         });
 
-        OAuthProvider.Builder provider = OAuthProvider.newBuilder("twitter.com");
+        provider = OAuthProvider.newBuilder("twitter.com");
         provider.addCustomParameter("lang", "tr");
 
-        loginButton.setCallback(new Callback<TwitterSession>() {
-            @Override
-            public void success(Result<TwitterSession> result) {
-                TwitterSession session = TwitterCore.getInstance().getSessionManager().getActiveSession();
-                login(session);
-            }
-
-            @Override
-            public void failure(TwitterException exception) {
-                // ... do something
-            }
-        });
-//
         return view;
     }
-    public void login(TwitterSession session){
-        String username=session.getUserName();
-        FirebaseUser user = mAuth.getCurrentUser();
-
-        Intent i = new Intent(getActivity(), QuizesActivity.class);
-        startActivity(i);
-    }
-
 
 
     private void signIn(String str_email, String str_password){
@@ -158,13 +143,123 @@ public class LoginFragment extends Fragment {
 
     }
 
+    private void pendingAuthResult(){
+
+        Task<AuthResult> pendingResultTask = mAuth.getPendingAuthResult();
+        if (pendingResultTask != null) {
+            // There's something already here! Finish the sign-in for your user.
+            pendingResultTask
+                    .addOnSuccessListener(
+                            new OnSuccessListener<AuthResult>() {
+                                @Override
+                                public void onSuccess(AuthResult authResult) {
+                                    // User is signed in.
+                                    // IdP data available in
+                                    // authResult.getAdditionalUserInfo().getProfile().
+                                    // The OAuth access token can also be retrieved:
+                                    // authResult.getCredential().getAccessToken().
+                                    // The OAuth secret can be retrieved by calling:
+                                    // authResult.getCredential().getSecret().
+                                    Log.i("Twitter_State","" + authResult );
+                                    String username = authResult.getAdditionalUserInfo().getUsername();
+                                    String user = authResult.getAdditionalUserInfo().getProfile().toString() + "";
+                                    Log.i("Twitter_State","" + user);
+
+                                    Intent i = new Intent(getActivity(), QuizesActivity.class);
+                                    startActivity(i);
+
+
+                                }
+                            })
+                    .addOnFailureListener(
+                            new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    // Handle failure.
+                                    Log.i("Twitter_State","" + e.getMessage() );
+
+                                }
+                            });
+        } else {
+            // There's no pending result so you need to start the sign-in flow.
+            // See below.
+
+            Log.i("Twitter_State","NoPendingResult" );
+
+            startActivityForSignIn();
+
+
+        }
+
+    }
+
+    private void startActivityForSignIn(){
+
+        mAuth
+                .startActivityForSignInWithProvider(/* activity= */ getActivity(), provider.build())
+                .addOnSuccessListener(
+                        new OnSuccessListener<AuthResult>() {
+                            @Override
+                            public void onSuccess(AuthResult authResult) {
+                                // User is signed in.
+                                // IdP data available in
+                                // authResult.getAdditionalUserInfo().getProfile().
+                                // The OAuth access token can also be retrieved:
+                                // authResult.getCredential().getAccessToken().
+                                // The OAuth secret can be retrieved by calling:
+                                // authResult.getCredential().getSecret().
+
+                                Log.i("Twitter_State","" + authResult);
+                                String username = authResult.getAdditionalUserInfo().getUsername();
+                                String user = authResult.getAdditionalUserInfo().getProfile().toString() + "";
+                                Log.i("Twitter_State","" + user);
+
+
+
+                                Intent i = new Intent(getActivity(), QuizesActivity.class);
+                                startActivity(i);
+
+                            }
+                        })
+                .addOnFailureListener(
+                        new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                // Handle failure.
+                                Log.i("Twitter_State_Error","" + e.getMessage());
+
+                            }
+                        });
+
+    }
+
+    private void uploadUserFields(String uId){
+
+
+//        Map<String, String> user_map = new HashMap<>();
+//        user_map.put("nickname",et_nickname.getText() + "");
+//        user_map.put("email",et_emailRegister.getText() + "");
+//        user_map.put("source", "email");
+//
+//        DocumentReference userRef= db.collection("Users").document(uId);
+//
+//        userRef.set(user_map)
+//                .addOnSuccessListener(new OnSuccessListener<Void>() {
+//                    @Override
+//                    public void onSuccess(Void aVoid) {
+//
+//                        Intent i = new Intent(getActivity(), QuizesActivity.class);
+//                        startActivity(i);
+//
+//                    }
+//                });
+    }
 
     private void makeToast(String str){
 
         Toast.makeText(getContext(),str,0).show();
 
     }
-
 
     private void startLoading(View view){
 
@@ -209,6 +304,7 @@ public class LoginFragment extends Fragment {
         signIn(str_email,str_password);
 
     }
+
     private void resetPass() {
 
         final EditText sifre=(EditText)view.findViewById(R.id.et_emailForPass);
@@ -245,7 +341,7 @@ public class LoginFragment extends Fragment {
 
         // Pass the activity result to the login button.
 
-        loginButton.onActivityResult(requestCode, resultCode, data);
+//        loginButton.onActivityResult(requestCode, resultCode, data);
 
 
     }
