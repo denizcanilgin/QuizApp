@@ -23,10 +23,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.OAuthProvider;
 import com.tansuyegen.quizapp.Activities.AuthActivity;
 import com.tansuyegen.quizapp.Activities.QuizActivity;
 import com.tansuyegen.quizapp.Activities.QuizesActivity;
@@ -46,7 +49,7 @@ import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 public class LoginFragment extends Fragment {
 
     TwitterLoginButton loginButton;
-
+    FirebaseAuth firebaseAuth;
     TextView tv_forgotPass;
     EditText et_email,et_pass;
     LinearLayout ly_resetPass, ly_main,resss;
@@ -59,7 +62,7 @@ public class LoginFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_login,null);
         resetPass();
-        Twitter.initialize(getActivity());
+       // Twitter.initialize(getActivity());
         TwitterConfig config = new TwitterConfig.Builder(getActivity())
                 .logger(new DefaultLogger(Log.DEBUG))
                 .twitterAuthConfig(new TwitterAuthConfig("y0JfGrWdFBPCoWOVgMSzL9KQp", "nJst3CoJ5pL2UvN8iCzzHIikFC7IZL9DWUGiuu4zOA7jHKtkVC"))
@@ -94,15 +97,13 @@ public class LoginFragment extends Fragment {
             }
         });
 
-
+        OAuthProvider.Builder provider = OAuthProvider.newBuilder("twitter.com");
+        provider.addCustomParameter("lang", "tr");
 
         loginButton.setCallback(new Callback<TwitterSession>() {
             @Override
             public void success(Result<TwitterSession> result) {
                 TwitterSession session = TwitterCore.getInstance().getSessionManager().getActiveSession();
-                TwitterAuthToken authToken = session.getAuthToken();
-                String token = authToken.token;
-                String secret = authToken.secret;
                 login(session);
             }
 
@@ -116,9 +117,10 @@ public class LoginFragment extends Fragment {
     }
     public void login(TwitterSession session){
         String username=session.getUserName();
-                Intent intent=new Intent(getActivity(),QuizesActivity.class);
-                startActivity(intent);
+        FirebaseUser user = mAuth.getCurrentUser();
 
+        Intent i = new Intent(getActivity(), QuizesActivity.class);
+        startActivity(i);
     }
 
 
@@ -247,6 +249,6 @@ public class LoginFragment extends Fragment {
 
 
     }
-    }
+}
 
 

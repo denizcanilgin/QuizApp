@@ -80,7 +80,6 @@
         <com.twitter.sdk.android.core.identity.TwitterLoginButton
             android:layout_marginTop="10dp"
             android:id="@+id/bt_twitter"
-            android:onClick="twitterg"
             android:background="#00acee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
