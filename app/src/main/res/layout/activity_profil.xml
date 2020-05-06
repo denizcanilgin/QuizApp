@@ -1,39 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorPrimary"
     android:orientation="vertical"
     tools:context=".Activities.ProfilActivity">
 
 
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:elevation="15dp"
+        android:layout_height="200dp">
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="50dp"
+        android:layout_height="250dp">
+
+    </androidx.cardview.widget.CardView>
+
 
     <LinearLayout
-
+        android:elevation="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="15dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/cdbold"
-            android:text="Profil"
-            android:textSize="18dp" />
-        <ImageView
+            <ImageView
+                android:id="@+id/iv_menuIcon"
+                android:src="@drawable/ic_menu_black_24dp"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:paddingTop="5dp"/>
+
+
+            <TextView
+                android:text="@string/proifle"
+                android:fontFamily="@font/cdbold"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                android:paddingEnd="60dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="100dp"
             android:id="@+id/profdegis"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorWhite"
             android:layout_height="100dp"
             android:layout_marginTop="60dp"
             android:layout_marginBottom="30dp"
-            android:layout_marginLeft="140dp"
-            android:src="@drawable/ic_personnn"/>
+            android:layout_gravity="center"
+            android:src="@drawable/ic_person_black_24dp"/>
 
 
         <EditText
@@ -70,7 +102,7 @@
 
             <Button
                 android:id="@+id/kayit"
-                android:onClick="kayit"
+                android:onClick="saveProfileAction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_state"
@@ -78,6 +110,8 @@
                 android:text="Kaydet"
                 android:textColor="@color/colorWhite" />
         </androidx.cardview.widget.CardView>
+
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,6 +121,7 @@
             <Button
                 android:id="@+id/kayit2"
                 android:onClick="kayit2"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_state"
@@ -98,4 +133,8 @@
     </LinearLayout>
 
 
-</LinearLayout>
+    <include layout="@layout/activity_loading" />
+
+
+
+</RelativeLayout>

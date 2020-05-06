@@ -900,7 +900,10 @@ drawable googleg_standard_color_18
 drawable greenmark
 drawable greentimer
 drawable ic_email_black_24dp
+drawable ic_exit_to_app_black_24dp
 drawable ic_home1
+drawable ic_home_black_24dp
+drawable ic_image_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_menu_black_24dp
@@ -908,6 +911,7 @@ drawable ic_menubut
 drawable ic_person2
 drawable ic_person_black_24dp
 drawable ic_personnn
+drawable ic_photo_camera_black_24dp
 drawable ic_power_settings_new_black_24dp
 drawable ic_profilfoto
 drawable ic_visibility_black_24dp
@@ -1286,11 +1290,13 @@ id tv_fullname
 id tv_nav
 id tv_numberOfQuestions
 id tv_orderno
+id tv_pickFromGallery
 id tv_point
 id tv_questionTitle
 id tv_quizTitle
 id tv_second_name
 id tv_second_point
+id tv_takeAPhoto
 id tv_third_name
 id tv_third_point
 id tv_timer
@@ -1393,6 +1399,7 @@ layout activity_quiz
 layout activity_result
 layout activity_splash
 layout custom_dialog
+layout dialog_media_picker
 layout dialog_menu
 layout fragment_login
 layout fragment_register
@@ -1500,6 +1507,7 @@ string login
 string nickname
 string password
 string pleaseentervalidemail
+string proifle
 string project_id
 string register
 string search_menu_title

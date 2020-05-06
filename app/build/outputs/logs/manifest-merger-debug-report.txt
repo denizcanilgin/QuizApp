@@ -199,28 +199,32 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/deni
 		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:15:9-65
 	android:name
 		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:10:9-28
-activity#com.tansuyegen.quizapp.Activities.ProfilActivity
-ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:16:9-72
+activity#com.tansuyegen.quizapp.Activities.SplashActivity
+ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:16:9-22:20
 	android:name
 		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:16:19-60
-activity#com.tansuyegen.quizapp.Activities.SplashActivity
-ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:17:9-23:20
-	android:name
-		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:17:19-60
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:18:13-22:29
+ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:19:17-69
+ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:19:25-66
+		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:21:17-77
+ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:21:27-74
+		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:20:27-74
 activity#com.tansuyegen.quizapp.Activities.MainActivity
-ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:24:9-61
+ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:23:9-98
+	android:screenOrientation
+		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:23:59-95
 	android:name
-		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:24:19-58
+		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:23:19-58
+activity#com.tansuyegen.quizapp.Activities.ProfilActivity
+ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:24:9-109
+	android:screenOrientation
+		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:24:61-97
+	android:name
+		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:24:19-60
 activity#com.tansuyegen.quizapp.Activities.AuthActivity
 ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:25:9-61
 	android:name

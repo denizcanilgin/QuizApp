@@ -13,7 +13,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Activities.ProfilActivity"></activity>
         <activity android:name=".Activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.MainActivity" />
+        <activity android:name=".Activities.MainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Activities.ProfilActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".Activities.AuthActivity" />
         <activity android:name=".Activities.QuizActivity" />
         <activity android:name=".Activities.LeaderBoardActivity" />

@@ -610,6 +610,7 @@
     <string name="nickname">İsim / takma isim</string>
     <string name="password">Şifre</string>
     <string name="pleaseentervalidemail">Lütfen geçerli bir email adresi giriniz!</string>
+    <string name="proifle">Profil</string>
     <string name="project_id" translatable="false">quizapp-1db2c</string>
     <string name="register">Şimdi kayıt ol!</string>
     <string name="search_menu_title">Search</string>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">986389695233-77119k585i9jksprsvn6uspgratc68tq.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://quizapp-1db2c.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">986389695233</string>
+    <string name="google_api_key" translatable="false">AIzaSyBZ_dWKdFnQ0UhJ1hfc9DGGW_kmF2chJVE</string>
+    <string name="google_app_id" translatable="false">1:986389695233:android:f9b37ea0e33244d0ece900</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBZ_dWKdFnQ0UhJ1hfc9DGGW_kmF2chJVE</string>
+    <string name="google_storage_bucket" translatable="false">quizapp-1db2c.appspot.com</string>
+    <string name="project_id" translatable="false">quizapp-1db2c</string>
+</resources>
