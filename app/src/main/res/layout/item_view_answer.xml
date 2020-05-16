@@ -7,9 +7,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
-
         app:cardCornerRadius="15dp"
         app:cardElevation="1dp"
+        app:cardUseCompatPadding="true"
         android:clickable="false"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
@@ -26,7 +26,7 @@
 
             <TextView
                 android:id="@+id/tv_answerLetter"
-                android:layout_weight="16"
+                android:layout_weight="4"
                 android:text="A)"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -34,22 +34,32 @@
                 android:textSize="20dp"
                 android:fontFamily="@font/cdbold"
                 android:background="@color/colorPrimary"
-                android:padding="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:textColor="@color/colorWhite"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_width="0dp"
+                android:layout_height="65dp"/>
 
             <TextView
                 android:id="@+id/tv_answerDesc"
-                android:layout_weight="4"
+                android:layout_weight="12"
                 android:text="Lorem Ipsum"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textSize="12dp"
                 android:fontFamily="@font/cdbold"
                 android:padding="20dp"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/iv_greenThick"
+                android:layout_weight="4"
+                android:visibility="invisible"
+                android:layout_gravity="center"
+                android:src="@drawable/greenthickicon"
+                android:layout_width="0dp"
+                android:layout_height="64dp"/>
 
         </LinearLayout>
 

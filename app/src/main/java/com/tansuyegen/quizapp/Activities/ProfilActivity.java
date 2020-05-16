@@ -72,7 +72,7 @@ public class ProfilActivity extends AppCompatActivity {
         pass=findViewById(R.id.et_RegisterPassword);
         auth=FirebaseAuth.getInstance();
         storageReference= FirebaseStorage.getInstance().getReference("Uploads");
-        iv_menuIcon.findViewById(R.id.iv_menuIcon);
+        iv_menuIcon = findViewById(R.id.iv_menuIcon_profile);
         iv_menuIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -308,6 +308,7 @@ public class ProfilActivity extends AppCompatActivity {
 
         Picasso.get()
                 .load(img_url)
+                .placeholder(R.drawable.personalloginnnnn)
                 .into(iv_pp_image, new com.squareup.picasso.Callback() {
                     @Override
                     public void onSuccess() {
@@ -355,6 +356,24 @@ public class ProfilActivity extends AppCompatActivity {
         dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT);
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         dialog.show();
+    }
+
+    public void profil(View view) {
+        Intent intent=new Intent(ProfilActivity.this, ProfilActivity.class);
+        startActivity(intent);
+    }
+
+    public void Cikis1(View view) {
+        FirebaseAuth.getInstance().signOut();
+        Intent intent=new Intent(ProfilActivity.this,AuthActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void Anasayfa(View view) {
+        Intent intent=new Intent(ProfilActivity.this,QuizesActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 }

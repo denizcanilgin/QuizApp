@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.squareup.picasso.Picasso;
 import com.tansuyegen.quizapp.Activities.QuizesActivity;
 import com.tansuyegen.quizapp.Models.Quiz;
 import com.tansuyegen.quizapp.R;
@@ -40,11 +41,13 @@ public class QuizesAdapter extends ArrayAdapter<Quiz> {
         convertView = inflater.inflate(R.layout.item_view_quiz,null);
 
         ImageView iv_stateImage = convertView.findViewById(R.id.iv_stateImage);
+        ImageView iv_quizIcon = convertView.findViewById(R.id.iv_quizIcon);
         TextView tv_quizTitle = convertView.findViewById(R.id.tv_quizTitle);
         TextView tv_numberOfQuestions = convertView.findViewById(R.id.tv_numberOfQuestions);
 
         tv_quizTitle.setText(quizes.get(position).getTitle());
         tv_numberOfQuestions.setText(quizes.get(position).getNumberOfQuestions() + " Soru");
+        Picasso.get().load(quizes.get(position).getIconUrl() + "").into(iv_quizIcon);
 
         if(quizes.get(position).getActive())
         {

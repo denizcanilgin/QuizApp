@@ -28,6 +28,10 @@
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/layout/fragment_register.xml"
     },
     {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable_sporticon.png.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable/sporticon.png"
+    },
+    {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable-v24_splashimage.png.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable-v24/splashimage.png"
     },
@@ -36,12 +40,20 @@
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/layout_item_view_leaderboard.xml.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/layout/item_view_leaderboard.xml"
+    },
+    {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable_personalloginnnnn.png.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable/personalloginnnnn.png"
     },
     {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable-v24_leaderico.png.flat",
@@ -70,6 +82,10 @@
     {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable_redcrossicon.png.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable/redcrossicon.png"
     },
     {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
@@ -104,12 +120,24 @@
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable/ic_menubut.xml"
     },
     {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable_greenthickicon.png.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable/greenthickicon.png"
+    },
+    {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/layout_fragment_reset_pass.xml.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/layout/fragment_reset_pass.xml"
     },
     {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable_generalcultureicon.png.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable/generalcultureicon.png"
+    },
+    {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/font_cdregular.ttf.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/font/cdregular.ttf"
+    },
+    {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable_ic_visibility_black_24dp.xml.flat",
@@ -118,6 +146,10 @@
     {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/layout_item_view_quiz.xml.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/layout/item_view_quiz.xml"
+    },
+    {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/layout_activity_active_quizes.xml.flat",
@@ -160,6 +192,10 @@
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable_person_white.xml.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable/person_white.xml"
+    },
+    {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable_ic_menu_black_24dp.xml.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable/ic_menu_black_24dp.xml"
     },
@@ -186,6 +222,10 @@
     {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable_ic_photo_camera_black_24dp.xml.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable/ic_photo_camera_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable_ic_home_black_24dp.xml.flat",
@@ -220,6 +260,10 @@
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable-v24/greentimer.png"
     },
     {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
@@ -228,24 +272,24 @@
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/layout/dialog_media_picker.xml"
     },
     {
-        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/anim_exit_to_left.xml.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/anim/exit_to_left.xml"
+    },
+    {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/drawable_ic_home1.xml.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/drawable/ic_home1.xml"
     },
     {
-        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/font_cdslimitalic.ttf.flat",
-        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/font/cdslimitalic.ttf"
-    },
-    {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/font_cdslimitalic.ttf.flat",
+        "source": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/res/font/cdslimitalic.ttf"
     },
     {
         "merged": "/Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/build/intermediates/res/merged/debug/layout_activity_auth.xml.flat",

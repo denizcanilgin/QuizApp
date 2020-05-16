@@ -37,7 +37,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/iv_menuIcon"
+                android:id="@+id/iv_menuIcon_profile"
                 android:src="@drawable/ic_menu_black_24dp"
                 android:layout_width="52dp"
                 android:layout_height="52dp"

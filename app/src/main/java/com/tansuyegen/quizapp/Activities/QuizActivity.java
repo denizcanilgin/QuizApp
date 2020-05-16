@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -55,9 +56,9 @@ public class QuizActivity extends AppCompatActivity {
     // Access a Cloud Firestore instance from your Activity
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-    TextView tv_timer,tv_questionTitle;
+    TextView tv_timer, tv_questionTitle;
     ListView lv_answers;
-    int sec = 90; //Time of quiz
+    int sec; //Time of quiz
 
     ArrayList<String> question_ids;
 
@@ -83,21 +84,22 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private  void startTimer(){
-        final int fullTime = sec;
+    private void startTimer(int time) {
+        final int fullTime = time;
+        sec = time;
 
-        Timer T=new Timer();
+        Timer T = new Timer();
         T.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
 
-                if(sec > 0 ) {
+                if (sec > 0) {
 
                     sec = sec - 1;
                     tv_timer.setText(sec + "");
 
                     setColorOfTimer(fullTime, sec);
-                }else{
+                } else {
 
                     return;
 
@@ -107,13 +109,13 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private void setColorOfTimer(int fullTime, int currentTime){
+    private void setColorOfTimer(int fullTime, int currentTime) {
 
-        int breakPoint = fullTime/3;
+        int breakPoint = fullTime / 3;
 
-        if(fullTime - currentTime < breakPoint)
+        if (fullTime - currentTime < breakPoint)
             tv_timer.setBackgroundResource(R.drawable.greentimer);
-        else if(((fullTime - currentTime) >= breakPoint) && ((fullTime - currentTime) < 2 * breakPoint))
+        else if (((fullTime - currentTime) >= breakPoint) && ((fullTime - currentTime) < 2 * breakPoint))
             tv_timer.setBackgroundResource(R.drawable.yellowtimer);
         else
             tv_timer.setBackgroundResource(R.drawable.redtimer);
@@ -121,7 +123,7 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private void fetchQuiz(String id){
+    private void fetchQuiz(String id) {
 
         DocumentReference docRef = db.collection("Quizes").document(id);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -133,7 +135,11 @@ public class QuizActivity extends AppCompatActivity {
                         Log.d("TAG", "DocumentSnapshot data: " + document.getData());
 
                         String question_pool_id = document.getString("QuestionPool_ID");
+                        String quiz_time = document.getString("Time");
+
                         fetchQuestionIDs(question_pool_id);
+                        startTimer(Integer.parseInt(quiz_time + ""));
+
 
                     } else {
                         Log.d("", "No such document");
@@ -146,7 +152,9 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private void fetchQuestionIDs(final String question_pool_id){
+    private void fetchQuestionIDs(final String question_pool_id) {
+
+        Log.i("Question_Pool_Id", "" + question_pool_id);
 
         DocumentReference docRef = db.collection("QuestionPools").document(question_pool_id);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -171,7 +179,7 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private void fetchQuestion(final String question_position){
+    private void fetchQuestion(final String question_position) {
 
         final DocumentReference docRef = db.collection("Questions").document(question_position);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -188,13 +196,13 @@ public class QuizActivity extends AppCompatActivity {
 
                         ArrayList<Answer> answers_object = new ArrayList<>();
 
-                        for(int i = 0 ; i < answers.size() ; i++){
+                        for (int i = 0; i < answers.size(); i++) {
 
-                            answers_object.add(new Answer(i + 1 + ")",  answers.get(i) + ""));
+                            answers_object.add(new Answer(i + 1 + ")", answers.get(i) + "", false,false));
 
                         }
 
-                        fillQuestionAndAnswers(title,answers_object,correct_answer);
+                        fillQuestionAndAnswers(title, answers_object, correct_answer);
 
                     } else {
                         Log.d("", "No such document");
@@ -207,11 +215,11 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private void fillQuestionAndAnswers(String title, ArrayList<Answer> answers, final String correct_answer){
+    private void fillQuestionAndAnswers(String title, final ArrayList<Answer> answers, final String correct_answer) {
 
         tv_questionTitle.setText(title);
 
-        AnswersAdapter answersAdapter = new AnswersAdapter(this, R.layout.item_view_answer,answers);
+        final AnswersAdapter answersAdapter = new AnswersAdapter(this, R.layout.item_view_answer, answers);
         lv_answers.setAdapter(answersAdapter);
         answersAdapter.notifyDataSetChanged();
 
@@ -221,56 +229,67 @@ public class QuizActivity extends AppCompatActivity {
 
                 String pos = position + "";
 
-                if(pos.equals(correct_answer)){
+                if (pos.equals(correct_answer)) {
 
-                    Log.i("CORRECTNESS","true");
+                    Log.i("CORRECTNESS", "true");
                     numberOfCorrectlyAnsweredQuestion++;
 
-                }else{
 
-                    Log.i("CORRECTNESS","false");
+                } else {
 
+                    Log.i("CORRECTNESS", "false");
 
                 }
 
-                if(question_ids.size()-1 > current_question) {
-                    current_question++;
-                    fetchQuestion(question_ids.get(current_question));
-                }else{
+                answers.get(Integer.parseInt(correct_answer)).setIsCorrectAnswer(true);
+                answers.get(Integer.parseInt(String.valueOf(position))).setSelectedAnswer(true);
+                answersAdapter.notifyDataSetChanged();
 
-                    //Test is completed
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Delay here
+                        if (question_ids.size() - 1 > current_question) {
+                            current_question++;
+                            fetchQuestion(question_ids.get(current_question));
+                        } else {
 
-                    Log.i("SEC","" + sec);
+                            //Test is completed
 
-                    int score = sec*correct_answer_of_current_question;
+                            Log.i("SEC", "" + sec);
+
+                            int score = sec * correct_answer_of_current_question;
 //                    saveScore(score);
-                    Intent i = new Intent(QuizActivity.this,ResultActivity.class);
-                    i.putExtra("leaderBoardId", "lb_" + currentQuizId);
-                    i.putExtra("score", score);
-                    startActivity(i);
+                            Intent i = new Intent(QuizActivity.this, ResultActivity.class);
+                            i.putExtra("leaderBoardId", "lb_" + currentQuizId);
+                            i.putExtra("score", score);
+                            startActivity(i);
+                        }
 
+                    }
+                }, 1000);
 
-                }
             }
         });
 
     }
 
-    private void saveScore(int score){
+    private void saveScore(int score) {
 
-        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         Map<String, Object> score_map = new HashMap<>();
         score_map.put(currentFirebaseUser.getUid() + "", score);
 
-        db.collection("LeaderBoards").document("lb_"+ currentQuizId)
+        db.collection("LeaderBoards").document("lb_" + currentQuizId)
                 .set(score_map, SetOptions.merge())
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Log.d("TAG", "DocumentSnapshot successfully written!");
 
-                        Intent i = new Intent(QuizActivity.this,ResultActivity.class);
+                        Intent i = new Intent(QuizActivity.this, ResultActivity.class);
                         i.putExtra("leaderBoardId", "lb_" + currentQuizId);
                         startActivity(i);
 
@@ -285,15 +304,12 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private void setNewQuestionAnswers(){
-
-
-
+    private void setNewQuestionAnswers() {
 
 
     }
 
-    private void onCreateMethods(){
+    private void onCreateMethods() {
 
         // Access a Cloud Firestore instance from your Activity
 
@@ -307,8 +323,8 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(QuizActivity.this, LeaderBoardActivity.class);
-                startActivity(i);
+//                Intent i = new Intent(QuizActivity.this, LeaderBoardActivity.class);
+//                startActivity(i);
 
             }
         });
@@ -320,7 +336,6 @@ public class QuizActivity extends AppCompatActivity {
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
         window.setNavigationBarColor(Color.parseColor("#5c4db1"));
 
-        startTimer();
 
         ArrayList<Answer> answers = new ArrayList<>();
 //        setNewQuestionAnswers(answers); //call this method by array of answers

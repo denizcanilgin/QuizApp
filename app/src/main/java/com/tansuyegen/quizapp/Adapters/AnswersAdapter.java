@@ -1,10 +1,12 @@
 package com.tansuyegen.quizapp.Adapters;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,9 +43,23 @@ public class AnswersAdapter extends ArrayAdapter<Answer> {
 
         TextView tv_answerDesc = convertView.findViewById(R.id.tv_answerDesc);
         TextView tv_answerLetter = convertView.findViewById(R.id.tv_answerLetter);
+        ImageView iv_greenThick = convertView.findViewById(R.id.iv_greenThick);
 
         String a_letter = answers.get(position).getLetter();
         String a_desc = answers.get(position).getDesc();
+
+        boolean isCorrectAnswer = answers.get(position).getIsCorrectAnswer();
+        boolean isSelectedAnswer = answers.get(position).getSelectedAnswer();
+
+        if(isCorrectAnswer)
+            iv_greenThick.setVisibility(View.VISIBLE);
+
+        else if(isSelectedAnswer){
+            iv_greenThick.setVisibility(View.VISIBLE);
+            iv_greenThick.setImageResource(R.drawable.redcrossicon);
+            iv_greenThick.setPadding(10,10,10,10);
+        }
+
 
         tv_answerDesc.setText(a_desc);
         tv_answerLetter.setText(a_letter);

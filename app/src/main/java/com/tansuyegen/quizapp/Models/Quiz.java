@@ -4,6 +4,7 @@ public class Quiz {
 
     String title;
     String id;
+    String iconUrl;
     long startTimeInSec;
     long endTimeInSec;
     int numberOfQuestions;
@@ -17,13 +18,22 @@ public class Quiz {
         this.title = title;
     }
 
-    public Quiz(String title, String id, long startTimeInSec, long endTimeInSec, int numberOfQuestions, Boolean isActive) {
+    public Quiz(String title, String id, String iconUrl, long startTimeInSec, long endTimeInSec, int numberOfQuestions, Boolean isActive) {
         this.title = title;
         this.startTimeInSec = startTimeInSec;
         this.endTimeInSec = endTimeInSec;
         this.isActive = isActive;
         this.numberOfQuestions = numberOfQuestions;
+        this.iconUrl = iconUrl;
         this.id = id;
+    }
+
+    public String getIconUrl() {
+        return iconUrl;
+    }
+
+    public void setIconUrl(String iconUrl) {
+        this.iconUrl = iconUrl;
     }
 
     public String getId() {

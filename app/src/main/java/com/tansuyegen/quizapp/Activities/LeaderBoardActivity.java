@@ -27,7 +27,6 @@ public class LeaderBoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
         onCreateMethods();
-//        fillUsersLeaderBoard();
         leaderBoardAdapter.notifyDataSetChanged();
 
     }

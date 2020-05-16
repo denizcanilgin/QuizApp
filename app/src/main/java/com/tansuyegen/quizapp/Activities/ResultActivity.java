@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -24,6 +25,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.squareup.picasso.Picasso;
 import com.tansuyegen.quizapp.Adapters.LeaderBoardAdapter;
 import com.tansuyegen.quizapp.Models.LeaderBoardUser;
 import com.tansuyegen.quizapp.R;
@@ -43,6 +45,7 @@ public class ResultActivity extends AppCompatActivity {
 
     TextView tv_first_name,tv_second_name,tv_third_name;
     TextView tv_first_point,tv_second_point,tv_third_point;
+    ImageView iv_pp_first,iv_pp_second,iv_pp_third;
 
     int leaderBoardOrdering = 0;
     int currentUserPosition = 0;
@@ -146,11 +149,14 @@ public class ResultActivity extends AppCompatActivity {
                     DocumentSnapshot document = task.getResult();
 
                     String nickname = document.get("nickname") + "";
+                    String ppUrl = document.get("ImageURL") + "";
 
                     if(nickname.equals("null"))
                         nickname  = "Anonim Kullanıcı";
 
-                    fillUsersLeaderBoard(uId,point,nickname);
+
+
+                    fillUsersLeaderBoard(uId,point,nickname,ppUrl);
 
 
 
@@ -170,6 +176,10 @@ public class ResultActivity extends AppCompatActivity {
         tv_second_point = findViewById(R.id.tv_second_point);
         tv_third_point = findViewById(R.id.tv_third_point);
 
+        iv_pp_first = findViewById(R.id.iv_pp_first);
+        iv_pp_second = findViewById(R.id.iv_pp_second);
+        iv_pp_third = findViewById(R.id.iv_pp_third);
+
         usersLeaderBoard = new ArrayList<>();
         ly_leaderBoard = findViewById(R.id.ly_leaderBoard);
         leaderBoardAdapter = new LeaderBoardAdapter(this, R.layout.item_view_leaderboard,usersLeaderBoard);
@@ -183,9 +193,9 @@ public class ResultActivity extends AppCompatActivity {
 
     }
 
-    private void fillUsersLeaderBoard(String userId, String userPoint, String userNickname){
+    private void fillUsersLeaderBoard(String userId, String userPoint, String userNickname, String iv_pp_url){
 
-        usersLeaderBoard.add(new LeaderBoardUser(userId,0,Integer.parseInt(userPoint),userNickname,"url"));
+        usersLeaderBoard.add(new LeaderBoardUser(userId,0,Integer.parseInt(userPoint),userNickname,iv_pp_url + ""));
 
 
         Boolean sorted = false;
@@ -248,7 +258,19 @@ public class ResultActivity extends AppCompatActivity {
         tv_second_point.setText(second_point + " Puan");
         tv_third_point.setText(third_point + " Puan");
 
+        Picasso.get().load(first.getUser_profile_photo_url()).placeholder(R.drawable.personalloginnnnn).into(iv_pp_first);
+        Picasso.get().load(second.getUser_profile_photo_url()).placeholder(R.drawable.personalloginnnnn).into(iv_pp_second);
+        Picasso.get().load(third.getUser_profile_photo_url()).placeholder(R.drawable.personalloginnnnn).into(iv_pp_third);
+
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent i = new Intent(ResultActivity.this,QuizesActivity.class);
+        startActivity(i);
+
+    }
 }

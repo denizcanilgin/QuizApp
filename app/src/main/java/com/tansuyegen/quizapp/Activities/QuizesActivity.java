@@ -115,8 +115,6 @@ public class QuizesActivity extends AppCompatActivity {
         dialog.show();
     }
 
-
-
     private void fetchAllQuizes(){
 
         final Date currentTime = Calendar.getInstance().getTime();
@@ -136,9 +134,11 @@ public class QuizesActivity extends AppCompatActivity {
                                 Long end_time = 0L;
                                 Long start_time = 0L;
                                 String numberOfQuestions;
+                                String iconUrl = "";
 
                                 Quiz quiz;
 
+                                iconUrl = document.getString("Icon");
                                 end_time = document.getTimestamp("EndTime").getSeconds();
                                 start_time = document.getTimestamp("StartTime").getSeconds();
                                 numberOfQuestions =  document.getString("NumberOfQuestions");
@@ -146,10 +146,10 @@ public class QuizesActivity extends AppCompatActivity {
                                 if((dateToTimestamp(currentTime) < end_time) && dateToTimestamp(currentTime) >= start_time){
 
                                     Log.d("AVAILABLE_QUIZES:" ,  document.getId()+" => " + document.getData());
-                                    quiz = new Quiz(document.get("Title") + " ", document.getId() + "" ,start_time,end_time,Integer.parseInt(numberOfQuestions) ,true);
+                                    quiz = new Quiz(document.get("Title") + " ", document.getId() + "", iconUrl,start_time,end_time,Integer.parseInt(numberOfQuestions) ,true);
 
                                 }else{
-                                    quiz = new Quiz(document.get("Title") + " ",document.getId() + "",start_time,end_time,Integer.parseInt(numberOfQuestions) ,false);
+                                    quiz = new Quiz(document.get("Title") + " ",document.getId() + "", iconUrl,start_time,end_time,Integer.parseInt(numberOfQuestions) ,false);
                                     Log.d("AVAILABLE_QUIZES:" ,  "NOT FOUND " + end_time + "-" + dateToTimestamp(currentTime));
 
                                 }
@@ -206,7 +206,6 @@ public class QuizesActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
 
     public void Anasayfa(View view) {
         Intent intent=new Intent(QuizesActivity.this,QuizesActivity.class);

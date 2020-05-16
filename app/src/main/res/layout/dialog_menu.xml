@@ -19,7 +19,7 @@
             android:layout_marginBottom="150dp"/>
 
         <TextView
-            android:text="Ana Sayfa"
+            android:text="  Ana Sayfa"
             android:textSize="24dp"
             android:onClick="Anasayfa"
             android:id="@+id/anas"
@@ -35,12 +35,12 @@
         <TextView
             android:layout_marginTop="25dp"
             android:id="@+id/profil"
-            android:text="Profil"
+            android:text="  Profil"
             android:onClick="profil"
             android:drawablePadding="-40dp"
             android:textSize="24dp"
             android:elevation="15dp"
-            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawableLeft="@drawable/person_white"
             android:textAlignment="center"
             android:fontFamily="@font/cdbold"
             android:textColor="@color/colorWhite"
@@ -51,7 +51,7 @@
             android:layout_marginBottom="50dp"
             android:layout_marginTop="25dp"
             android:id="@+id/cikis"
-            android:text="Çıkış Yap"
+            android:text="  Çıkış Yap"
             android:textSize="24dp"
             android:drawablePadding="-40dp"
             android:onClick="Cikis1"
