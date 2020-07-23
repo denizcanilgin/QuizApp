@@ -110,7 +110,7 @@ public class LoginFragment extends Fragment {
     }
 
 
-    private void signIn(String str_email, String str_password){
+    private void signIn(String str_email, String str_password) {
 
         startLoading(view);
 

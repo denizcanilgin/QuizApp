@@ -47,7 +47,9 @@ public class QuizesAdapter extends ArrayAdapter<Quiz> {
 
         tv_quizTitle.setText(quizes.get(position).getTitle());
         tv_numberOfQuestions.setText(quizes.get(position).getNumberOfQuestions() + " Soru");
-        Picasso.get().load(quizes.get(position).getIconUrl() + "").into(iv_quizIcon);
+        if(quizes.get(position).getIconUrl() != null)
+            if(quizes.get(position).getIconUrl().length() > 3)
+                Picasso.get().load(quizes.get(position).getIconUrl() + "").into(iv_quizIcon);
 
         if(quizes.get(position).getActive())
         {

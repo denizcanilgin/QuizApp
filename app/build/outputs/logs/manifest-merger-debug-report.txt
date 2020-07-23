@@ -5,7 +5,7 @@ INJECTED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/mai
 INJECTED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:2:1-32:12
 INJECTED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:2:1-32:12
 MERGED from [com.twitter.sdk.android:twitter:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/4ac2698368038b0432dd6665be197a59/jetified-twitter-3.1.0/AndroidManifest.xml:18:1-27:12
-MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:18:1-37:12
+MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:18:1-37:12
 MERGED from [com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:18:1-39:12
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1f062955762b01de9ddf4a823b216457/jetified-twitter-core-3.1.0/AndroidManifest.xml:18:1-35:12
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/c848c62bfcae3f04351f6536eae6ec04/jetified-glide-4.11.0/AndroidManifest.xml:2:1-12:12
@@ -16,9 +16,9 @@ MERGED from [androidx.cardview:cardview:1.0.0] /Users/denizcanilgin/.gradle/cach
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b83093d7160cac6f58228c6198882b43/jetified-circleimageview-3.1.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/cccfd3c2b80d5fad1124ffebe28c3f3b/jetified-firebase-analytics-17.2.2/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:17:1-42:12
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/c50b0aef72dd6d28b02d00b623a9aa95/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.firebase:firebase-firestore:21.4.3] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/6269180a454dcee3102e33d0802d2ac4/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:2:1-26:12
-MERGED from [com.google.firebase:firebase-functions:16.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/a5e9da84956f1c5ae6a27a28808a3b4c/jetified-firebase-functions-16.1.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-functions:16.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/ee6e8d3bcea912bb2f14a9b0b4e3b283/jetified-firebase-functions-16.1.0/AndroidManifest.xml:2:1-10:12
 MERGED from [io.grpc:grpc-android:1.21.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/d10c1748f6272b90f813c777e522a0f6/jetified-grpc-android-1.21.0/AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/cc22061029568e927a90b39fd84bc307/jetified-gifdecoder-4.11.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/7e11ac1883f9e27592a377296b09eec8/jetified-firebase-auth-interop-19.0.0/AndroidManifest.xml:2:1-10:12
@@ -99,8 +99,8 @@ ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/A
 		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:5:22-78
 uses-permission#android.permission.INTERNET
 ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:6:5-67
-MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:25:5-67
-MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:25:5-67
+MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:25:5-67
+MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:25:5-67
 MERGED from [com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:25:5-67
 MERGED from [com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:25:5-67
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1f062955762b01de9ddf4a823b216457/jetified-twitter-core-3.1.0/AndroidManifest.xml:25:5-67
@@ -125,8 +125,8 @@ application
 ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml:8:5-30:19
 MERGED from [com.twitter.sdk.android:twitter:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/4ac2698368038b0432dd6665be197a59/jetified-twitter-3.1.0/AndroidManifest.xml:25:5-20
 MERGED from [com.twitter.sdk.android:twitter:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/4ac2698368038b0432dd6665be197a59/jetified-twitter-3.1.0/AndroidManifest.xml:25:5-20
-MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:27:5-35:19
-MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:27:5-35:19
+MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:27:5-35:19
+MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:27:5-35:19
 MERGED from [com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:27:5-37:19
 MERGED from [com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:27:5-37:19
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1f062955762b01de9ddf4a823b216457/jetified-twitter-core-3.1.0/AndroidManifest.xml:27:5-33:19
@@ -143,8 +143,8 @@ MERGED from [com.google.firebase:firebase-analytics:17.2.2] /Users/denizcanilgin
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/cccfd3c2b80d5fad1124ffebe28c3f3b/jetified-firebase-analytics-17.2.2/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:23:5-40:19
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/c50b0aef72dd6d28b02d00b623a9aa95/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/c50b0aef72dd6d28b02d00b623a9aa95/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.firebase:firebase-firestore:21.4.3] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/6269180a454dcee3102e33d0802d2ac4/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:21.4.3] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/6269180a454dcee3102e33d0802d2ac4/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:16:5-24:19
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/cc22061029568e927a90b39fd84bc307/jetified-gifdecoder-4.11.0/AndroidManifest.xml:9:5-20
@@ -251,8 +251,8 @@ INJECTED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/mai
 INJECTED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml
 MERGED from [com.twitter.sdk.android:twitter:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/4ac2698368038b0432dd6665be197a59/jetified-twitter-3.1.0/AndroidManifest.xml:23:5-44
 MERGED from [com.twitter.sdk.android:twitter:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/4ac2698368038b0432dd6665be197a59/jetified-twitter-3.1.0/AndroidManifest.xml:23:5-44
-MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:23:5-44
-MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:23:5-44
+MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:23:5-44
+MERGED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:23:5-44
 MERGED from [com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:23:5-44
 MERGED from [com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:23:5-44
 MERGED from [com.twitter.sdk.android:twitter-core:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1f062955762b01de9ddf4a823b216457/jetified-twitter-core-3.1.0/AndroidManifest.xml:23:5-44
@@ -273,12 +273,12 @@ MERGED from [com.google.firebase:firebase-analytics:17.2.2] /Users/denizcanilgin
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/cccfd3c2b80d5fad1124ffebe28c3f3b/jetified-firebase-analytics-17.2.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:21:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/c50b0aef72dd6d28b02d00b623a9aa95/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/c50b0aef72dd6d28b02d00b623a9aa95/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-firestore:21.4.3] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/6269180a454dcee3102e33d0802d2ac4/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:21.4.3] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/6269180a454dcee3102e33d0802d2ac4/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.firebase:firebase-functions:16.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/a5e9da84956f1c5ae6a27a28808a3b4c/jetified-firebase-functions-16.1.0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-functions:16.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/a5e9da84956f1c5ae6a27a28808a3b4c/jetified-firebase-functions-16.1.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-functions:16.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/ee6e8d3bcea912bb2f14a9b0b4e3b283/jetified-firebase-functions-16.1.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-functions:16.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/ee6e8d3bcea912bb2f14a9b0b4e3b283/jetified-firebase-functions-16.1.0/AndroidManifest.xml:6:5-8:41
 MERGED from [io.grpc:grpc-android:1.21.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/d10c1748f6272b90f813c777e522a0f6/jetified-grpc-android-1.21.0/AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.21.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/d10c1748f6272b90f813c777e522a0f6/jetified-grpc-android-1.21.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/cc22061029568e927a90b39fd84bc307/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
@@ -396,19 +396,19 @@ INJECTED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/mai
 		ADDED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/denizcanilgin/Documents/my_android_apps/QuizApp/app/src/main/AndroidManifest.xml
 activity#com.twitter.sdk.android.tweetui.PlayerActivity
-ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:28:9-31:49
+ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:28:9-31:49
 	android:configChanges
-		ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:30:13-74
+		ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:30:13-74
 	android:theme
-		ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:31:13-46
+		ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:31:13-46
 	android:name
-		ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:29:13-74
+		ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:29:13-74
 activity#com.twitter.sdk.android.tweetui.GalleryActivity
-ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:32:9-34:49
+ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:32:9-34:49
 	android:theme
-		ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:34:13-46
+		ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:34:13-46
 	android:name
-		ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/b1043286e6e11db60d3cd716d9dddb76/jetified-tweet-ui-3.1.0/AndroidManifest.xml:33:13-75
+		ADDED from [com.twitter.sdk.android:tweet-ui:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54587f8e7f3986a23e6da7cb1b105b5d/jetified-tweet-ui-3.1.0/AndroidManifest.xml:33:13-75
 activity#com.twitter.sdk.android.tweetcomposer.ComposerActivity
 ADDED from [com.twitter.sdk.android:tweet-composer:3.1.0] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/1017627927335c34919051cf5d2d853d/jetified-tweet-composer-3.1.0/AndroidManifest.xml:28:9-31:71
 	android:windowSoftInputMode
@@ -502,13 +502,13 @@ ADDED from [com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.grad
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:19.3.1] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/2b2e36951001ebbf6721ed1a092f647b/jetified-firebase-auth-19.3.1/AndroidManifest.xml:37:17-109
 provider#com.squareup.picasso.PicassoProvider
-ADDED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+ADDED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/c50b0aef72dd6d28b02d00b623a9aa95/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 	android:authorities
-		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/c50b0aef72dd6d28b02d00b623a9aa95/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 	android:exported
-		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/c50b0aef72dd6d28b02d00b623a9aa95/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 	android:name
-		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/54e313306116de8657c04c0e72bcdc7a/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+		ADDED from [com.squareup.picasso:picasso:2.71828] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/c50b0aef72dd6d28b02d00b623a9aa95/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
 ADDED from [com.google.firebase:firebase-firestore:21.4.3] /Users/denizcanilgin/.gradle/caches/transforms-2/files-2.1/6269180a454dcee3102e33d0802d2ac4/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:20:13-22:85
 	android:value
